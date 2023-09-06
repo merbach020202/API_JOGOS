@@ -27,15 +27,15 @@ namespace senai.inlock.webApi.Repositores
             }
         }
 
-        public void AtualizarIdUrl(string id, EstudioDomain estudio)
+        public void AtualizarIdUrl(int id, EstudioDomain estudio)
         {
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
-                string queryUpdate = "UPDATE Estudio SET Nome = @Nome WHERE IdEstudio = @IdEstudio";
+                string queryUpdate = "UPDATE Estudio SET Nome = @Nome WHERE IdEstudio = @IdEs";
 
                 using (SqlCommand cmd = new SqlCommand(queryUpdate, con))
                 {
-                    cmd.Parameters.AddWithValue("@IdEstudio", estudio.IdEstudio);
+                    cmd.Parameters.AddWithValue("@Id", id);
                     cmd.Parameters.AddWithValue("@Nome", estudio.Nome);
 
                     con.Open();
@@ -43,6 +43,11 @@ namespace senai.inlock.webApi.Repositores
                     cmd.ExecuteNonQuery();
                 }
             }
+        }
+
+        public void AtualizarIdUrl(string id, EstudioDomain estudio)
+        {
+            throw new NotImplementedException();
         }
 
         public EstudioDomain BuscarPorId(int id)

@@ -16,5 +16,6 @@ namespace senai.inlock.webApi.Interface
         void Deletar(int id);
 
         EstudioDomain BuscarPorId(int id);
+        void AtualizarIdUrl(int id, EstudioDomain estudio);
     }
 }
