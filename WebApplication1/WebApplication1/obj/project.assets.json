@@ -1645,9 +1645,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\44850641822\\Desktop\\Projeto Jogos(Visual Studio)\\API_JOGOS\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
-      "projectName": "WebApplication1",
-      "projectPath": "C:\\Users\\44850641822\\Desktop\\Projeto Jogos(Visual Studio)\\API_JOGOS\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\Users\\44850641822\\Desktop\\Projeto Jogos(Visual Studio)\\API_JOGOS\\WebApplication1\\WebApplication1\\senai.inlock.webApi.csproj",
+      "projectName": "senai.inlock.webApi",
+      "projectPath": "C:\\Users\\44850641822\\Desktop\\Projeto Jogos(Visual Studio)\\API_JOGOS\\WebApplication1\\WebApplication1\\senai.inlock.webApi.csproj",
       "packagesPath": "C:\\Users\\44850641822\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\44850641822\\Desktop\\Projeto Jogos(Visual Studio)\\API_JOGOS\\WebApplication1\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",

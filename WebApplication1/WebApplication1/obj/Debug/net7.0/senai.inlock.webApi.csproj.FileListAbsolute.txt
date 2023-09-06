@@ -1,0 +1,7 @@
+C:\Users\44850641822\Desktop\Projeto Jogos(Visual Studio)\API_JOGOS\WebApplication1\WebApplication1\obj\Debug\net7.0\senai.inlock.webApi.csproj.AssemblyReference.cache
+C:\Users\44850641822\Desktop\Projeto Jogos(Visual Studio)\API_JOGOS\WebApplication1\WebApplication1\obj\Debug\net7.0\senai.inlock.webApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\44850641822\Desktop\Projeto Jogos(Visual Studio)\API_JOGOS\WebApplication1\WebApplication1\obj\Debug\net7.0\senai.inlock.webApi.AssemblyInfoInputs.cache
+C:\Users\44850641822\Desktop\Projeto Jogos(Visual Studio)\API_JOGOS\WebApplication1\WebApplication1\obj\Debug\net7.0\senai.inlock.webApi.AssemblyInfo.cs
+C:\Users\44850641822\Desktop\Projeto Jogos(Visual Studio)\API_JOGOS\WebApplication1\WebApplication1\obj\Debug\net7.0\senai.inlock.webApi.csproj.CoreCompileInputs.cache
+C:\Users\44850641822\Desktop\Projeto Jogos(Visual Studio)\API_JOGOS\WebApplication1\WebApplication1\obj\Debug\net7.0\senai.inlock.webApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\44850641822\Desktop\Projeto Jogos(Visual Studio)\API_JOGOS\WebApplication1\WebApplication1\obj\Debug\net7.0\senai.inlock.webApi.MvcApplicationPartsAssemblyInfo.cache
