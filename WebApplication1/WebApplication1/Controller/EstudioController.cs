@@ -25,7 +25,6 @@ namespace senai.inlock.webApi.Controller
 
 
         [HttpGet]
-        [Authorize(Roles = "Administrador, Comum")]
         public IActionResult Get()
         {
             try
@@ -41,7 +40,6 @@ namespace senai.inlock.webApi.Controller
         }
 
         [HttpPost]
-        [Authorize(Roles = "Administrador")]
         public IActionResult Post(EstudioDomain novoEstudio)
         {
             try
@@ -65,51 +63,6 @@ namespace senai.inlock.webApi.Controller
                 _estudioRepository.Deletar(id);
 
                 return StatusCode(204);
-            }
-            catch (Exception erro)
-            {
-                return BadRequest(erro.Message);
-            }
-        }
-
-        [HttpGet("{id}")]
-        public IActionResult GetById(int id)
-        {
-            try
-            {
-                EstudioDomain estudioBuscado = _estudioRepository.BuscarPorId(id);
-
-                if (estudioBuscado == null)
-                {
-                    return NotFound("Nenhum Estúdio foi encontrado");
-                }
-
-                return Ok(estudioBuscado);
-            }
-            catch (Exception erro)
-            {
-                return BadRequest(erro.Message);
-            }
-
-        }
-
-        [HttpPut("{id}")]
-        public IActionResult PutId(int id, EstudioDomain estudio)
-        {
-            try
-            {
-                EstudioDomain estudioAtualizado = _estudioRepository.BuscarPorId(id);
-
-                if (estudioAtualizado == null)
-                {
-                    return NotFound("Invàlido");
-                }
-
-                estudio.IdEstudio = id;
-
-                _estudioRepository.AtualizarIdUrl(id, estudio);
-
-                return Ok(estudioAtualizado);
             }
             catch (Exception erro)
             {

@@ -1,4 +1,4 @@
-USE inlock_games;
+USE inlock_games_eduardo;
 
 SELECT * FROM TiposUsuario;
 

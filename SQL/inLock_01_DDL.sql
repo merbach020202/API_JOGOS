@@ -1,7 +1,7 @@
 CREATE  DATABASE inlock_games;
 GO
 
-USE inlock_games;
+USE inlock_games_eduardo;
 GO
 
 CREATE TABLE Estudio
@@ -15,10 +15,10 @@ CREATE TABLE Jogo
 (
 	IdJogo INT PRIMARY KEY IDENTITY
 	,IdEstudio INT FOREIGN KEY REFERENCES Estudio(IdEstudio)
-	,Nome VARCHAR(100) NOT NULL
-	,Descricao VARCHAR(100) NOT NULL
-	,DataLancamento DATE NOT NULL
-	,Valor SMALLMONEY NOT NULL
+	,Nome VARCHAR(100) 
+	,Descricao VARCHAR(100) 
+	,DataLancamento DATE 
+	,Valor SMALLMONEY 
 );
 GO
 

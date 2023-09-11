@@ -7,79 +7,7 @@ namespace senai.inlock.webApi.Repositores
 {
     public class EstudioRepository : IEstudioRepository
     {
-        private string StringConexao = "Data Source = NOTE05-S15; Initial Catalog=Filmes_Eduardo; User Id = sa; Pwd = Senai@134";
-
-        public void AtualizarIdCorpo(int id, EstudioDomain estudio)
-        {
-            using (SqlConnection con = new SqlConnection(StringConexao))
-            {
-                string queryUpdate = "UPDATE Estudio SET Nome = @Nome WHERE IdEstudio = @IdEstudio";
-
-                using (SqlCommand cmd = new SqlCommand(queryUpdate, con))
-                {
-                    cmd.Parameters.AddWithValue("@Nome", estudio.Nome);
-                    cmd.Parameters.AddWithValue("@IdEstudio", estudio.IdEstudio);
-
-                    con.Open();
-
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
-
-        public void AtualizarIdUrl(int id, EstudioDomain estudio)
-        {
-            using (SqlConnection con = new SqlConnection(StringConexao))
-            {
-                string queryUpdate = "UPDATE Estudio SET Nome = @Nome WHERE IdEstudio = @IdEs";
-
-                using (SqlCommand cmd = new SqlCommand(queryUpdate, con))
-                {
-                    cmd.Parameters.AddWithValue("@Id", id);
-                    cmd.Parameters.AddWithValue("@Nome", estudio.Nome);
-
-                    con.Open();
-
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
-
-        public void AtualizarIdUrl(string id, EstudioDomain estudio)
-        {
-            throw new NotImplementedException();
-        }
-
-        public EstudioDomain BuscarPorId(int id)
-        {
-            using (SqlConnection con = new SqlConnection(StringConexao))
-            {
-                string querySelectById = "SELECT IdEstudio, Nome FROM Estudio WHERE IdEstudio = @IdEstudio";
-
-                con.Open();
-
-                SqlDataReader rdr;
-
-                using (SqlCommand cmd = new SqlCommand(querySelectById, con))
-                {
-                    cmd.Parameters.AddWithValue("@IdEstudio", id);
-
-                    rdr = cmd.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        EstudioDomain estudioBuscado = new EstudioDomain()
-                        {
-                            IdEstudio = Convert.ToInt32(rdr["IdEstudio"]),
-                            Nome = rdr["Nome"].ToString(),
-                        };
-                        return estudioBuscado;
-                    }
-
-                    return null;
-                }
-            }
-        }
+        private string StringConexao = "Data Source = NOTE05-S15; Initial Catalog=inlock_games_eduardo; User Id = sa; Pwd = Senai@134";
 
         public void Cadastrar(EstudioDomain novoEstudio)
         {
@@ -117,7 +45,7 @@ namespace senai.inlock.webApi.Repositores
 
         public List<EstudioDomain> ListarTodos()
         {
-            List<EstudioDomain> ListaEstudios = new List<EstudioDomain>();
+            List<EstudioDomain> ListaEstudio = new List<EstudioDomain>();
 
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
@@ -139,11 +67,11 @@ namespace senai.inlock.webApi.Repositores
                             Nome = rdr["Nome"].ToString()
                         };
 
-                        ListaEstudios.Add(estudio);
+                        ListaEstudio.Add(estudio);
                     }
                 }
             }
-            return ListaEstudios;
+            return ListaEstudio;
         }
     }
 }

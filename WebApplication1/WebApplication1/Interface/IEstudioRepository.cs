@@ -9,13 +9,7 @@ namespace senai.inlock.webApi.Interface
 
         List<EstudioDomain> ListarTodos();
 
-        void AtualizarIdCorpo(int id, EstudioDomain estudio);
-
-        void AtualizarIdUrl(string id, EstudioDomain estudio);
-
         void Deletar(int id);
 
-        EstudioDomain BuscarPorId(int id);
-        void AtualizarIdUrl(int id, EstudioDomain estudio);
     }
 }
